@@ -17,7 +17,7 @@ quentin:
   salt:                      <%= salts[0]   %> # SHA1('0')
   crypted_password:          <%= passwds[0] %> # 'monkey'
   created_at:                <%%= 5.days.ago.to_s :db  %>
-  remember_token_expires_at: <%%= 1.days.from_now.to_s %>
+  remember_token_expires_at: <%%= 1.days.from_now.to_s :db %>
   remember_token:            <%= make_fake_token %>
 <% if options[:include_activation] -%>
   activation_code:           
